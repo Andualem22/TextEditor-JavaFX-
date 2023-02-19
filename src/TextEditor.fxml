@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane fx:id="initialize" prefHeight="550.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="TextEditorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+
+          <Menu text="File">
+              <MenuItem text="New" fx:id="onNew" onAction="#onNew"/>
+              <MenuItem text="Open" fx:id="onOpen" onAction="#onOpen"/>
+              <MenuItem text="Save" fx:id="onSave" onAction="#onSave"/>
+              <MenuItem text="Save As" fx:id="onSaveAs" onAction="#onSaveAs"/>
+              <MenuItem text="Exit" fx:id="onExit" onAction="#onExit"/>
+
+          </Menu>
+          <Menu text="Font">
+
+              <MenuItem text="Monospaced" onAction="#onMonospaced"/>
+              <MenuItem text="Serif" onAction="#onSerif"/>
+              <MenuItem text="SansSerif" onAction="#onSansSerif"/>
+              <CheckMenuItem text="Italic" onAction="#onItalic"/>
+              <CheckMenuItem text="Bold" onAction="#onBold"/>
+
+          </Menu>
+
+      </MenuBar>
+   </top>
+   <center>
+       <TextArea fx:id="areaText" prefWidth="629.0" BorderPane.alignment="CENTER"></TextArea>
+   </center>
+    <bottom>
+        <HBox prefHeight="60.0" prefWidth="629.0" BorderPane.alignment="CENTER"/>
+    </bottom>
+</BorderPane>

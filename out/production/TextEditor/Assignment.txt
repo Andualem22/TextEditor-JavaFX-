@@ -1,0 +1,27 @@
+create table Users
+(
+ID int primary key,
+Email varchar(20),
+Password varchar(10)
+);
+
+create table Todo
+(
+ID int primary key,
+Duedate date
+);
+
+create table Category
+(
+Id int primary key,
+Description varchar(20)
+);
+
+insert into users (Id, Email, Password)
+values(1, 'andualem@gmail.com', 'abc12345'), (2, 'ChengThao@gmail.com', 'def12345'), (3, 'ezana@gmail.com', '12345xyz');
+
+insert into Todo (Id, Duedate)
+values(10, '2022-03-27'), (11, '2022-03-28');
+
+insert into Category (Id, Description)
+values(20, 'Work'), (21, 'Chore'), (22, 'School'), (23, 'Fun');
